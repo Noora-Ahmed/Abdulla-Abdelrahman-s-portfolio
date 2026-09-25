@@ -12,13 +12,13 @@ lang_toggle_label: "العربية",
 hero_role: "Civil Engineer",
  
 hero_intro:
-"A multidisciplinary civil engineer interested in structural design, infrastructure systems, and digital engineering tools, delivering technically rigorous, code-compliant projects from concept to construction.",
+"Civil Engineer with experience in structural design, site supervision, Safety &health and BIM modelling. Skilled in AutoCAD, Revit, STAAD.Pro, ETABS...etc. Worked on various projects preparing engineering drawings, structural modelling, reinforced concrete detailing, preparing BOQs and monitoring daily construction progress while contacting with clients and contractors.",
  
 hero_cta: "See the work",
  
 work_title: "Selected Work",
  
-proj1_title: "Construction Engineer Intern",
+proj1_title: "Site Engineer Intern",
 proj1_sub: "Construction Site Supervision",
  
 proj2_title: "Mosque Extension",
@@ -56,7 +56,7 @@ lang_toggle_label: "English",
 hero_role: "مهندس مدني",
  
 hero_intro:
-"مهندس مدني متعدد التخصصات مهتم بالتصميم الإنشائي وأنظمة البنية التحتية وأدوات الهندسة الرقمية، ويقدّم مشاريع عالية الجودة ومتوافقة مع الأكواد الهندسية بدءاً من مرحلة الفكرة وحتى التنفيذ.",
+"مهندس مدني متخصص في التصميم الإنشائي والإشراف على المشاريع ونمذجة معلومات البناء (BIM)، مع خبرة في إعداد الرسومات الهندسية والنمذجة الإنشائية وتفاصيل تسليح الخرسانة المسلحة وحصر الكميات (BOQ). أمتلك مهارات متقدمة في استخدام AutoCAD وRevit وSTAAD.Pro وETABS، وشاركت في العديد من المشاريع الهندسية من مرحلة التصميم وحتى التنفيذ. كما أتمتع بخبرة في متابعة أعمال الموقع، وتطبيق معايير السلامة والصحة المهنية، والتنسيق الفعال مع العملاء والاستشاريين والمقاولين لضمان تنفيذ المشاريع وفق أعلى معايير الجودة والكفاءة.​‌",
  
 hero_cta: "استعرض الأعمال",
  
