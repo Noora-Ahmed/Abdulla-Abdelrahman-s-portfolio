@@ -179,3 +179,11 @@ Initialize
 const savedLang = localStorage.getItem("preferredLang");
  
 applyLanguage(savedLang === "ar" ? "ar" : "en");
+
+/* ============================================================
+PDF Viewer Function
+============================================================ */
+function openPdfViewer(pdfUrl) {
+    // This opens the PDF in a new browser tab automatically
+    window.open(pdfUrl, '_blank');
+}
