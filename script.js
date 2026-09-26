@@ -197,30 +197,47 @@ applyLanguage(savedLang === "ar" ? "ar" : "en");
 /* ============================================================
 PDF Viewer Function
 ============================================================ */
-function openPdfViewer(pdfUrl) {
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+  "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+async function openPdfViewer(url) {
   const modal = document.getElementById('pdf-modal');
-  const frame = document.getElementById('pdf-modal-frame');
-  frame.src = pdfUrl + '#toolbar=0';
-  modal.classList.add('active');
+  const container = document.getElementById('pdf-modal-frame');
+  container.innerHTML = '<p class="pdf-loading">Loading…</p>';
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  try {
+    const pdf = await pdfjsLib.getDocument(url).promise;
+    container.innerHTML = '';
+
+    for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+      const page = await pdf.getPage(pageNum);
+      const containerWidth = container.clientWidth || 800;
+      const baseViewport = page.getViewport({ scale: 1 });
+      const scale = (containerWidth / baseViewport.width) * (window.devicePixelRatio || 1);
+      const viewport = page.getViewport({ scale });
+
+      const canvas = document.createElement('canvas');
+      canvas.className = 'pdf-page-canvas';
+      canvas.width = viewport.width;
+      canvas.height = viewport.height;
+      canvas.style.width = '100%';
+      canvas.style.height = 'auto';
+
+      const ctx = canvas.getContext('2d');
+      await page.render({ canvasContext: ctx, viewport }).promise;
+      container.appendChild(canvas);
+    }
+  } catch (err) {
+    container.innerHTML = '<p class="pdf-loading">Could not load PDF.</p>';
+    console.error(err);
+  }
 }
 
 function closePdfViewer() {
   const modal = document.getElementById('pdf-modal');
-  const frame = document.getElementById('pdf-modal-frame');
-  modal.classList.remove('active');
-  frame.src = '';
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+  document.getElementById('pdf-modal-frame').innerHTML = '';
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  const modal = document.getElementById('pdf-modal');
-  if (modal) {
-    modal.addEventListener('click', (e) => {
-      if (e.target.id === 'pdf-modal') closePdfViewer();
-    });
-  }
-
-  const frame = document.getElementById('pdf-modal-frame');
-  if (frame) {
-    frame.addEventListener('contextmenu', (e) => e.preventDefault());
-  }
-});
