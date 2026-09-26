@@ -80,13 +80,14 @@ proj3_sub: "برج سكاي لاين الشاهق",
 view_work: "عرض أعمالي",
  
 skills_title: "البرامج والأدوات",
-    skills_design: "التصميم والرسم الهندسي",
+skills_design: "التصميم والرسم الهندسي",
 skills_structural: "التحليل الإنشائي",
 skills_infra: "نمذجة البنية التحتية والهيدروليكا",
 skills_project: "إدارة المشاريع وحصر الكميات",
 skills_reports: "التقارير الفنية والتوثيق",
 skills_data: "تحليل البيانات",
-``
+
+contact_title: "لنتواصل",
  
 contact_title: "لنتواصل",
  
