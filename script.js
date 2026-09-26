@@ -30,6 +30,12 @@ proj3_sub: "Sky-line High-Rise Building",
 view_work: "View My Work",
  
 skills_title: "Software & Tools",
+    skills_design: "Design & Drafting",
+skills_structural: "Structural Analysis",
+skills_infra: "Infrastructure & Hydraulic Modelling",
+skills_project: "Project & Quantity Management",
+skills_reports: "Technical Reports & Documentation",
+skills_data: "Data Analysis",
  
 contact_title: "Let's Connect",
  
@@ -74,6 +80,14 @@ proj3_sub: "برج سكاي لاين الشاهق",
 view_work: "عرض أعمالي",
  
 skills_title: "البرامج والأدوات",
+skills_design: "التصميم والرسم الهندسي",
+skills_structural: "التحليل الإنشائي",
+skills_infra: "نمذجة البنية التحتية والهيدروليكا",
+skills_project: "إدارة المشاريع وحصر الكميات",
+skills_reports: "التقارير الفنية والتوثيق",
+skills_data: "تحليل البيانات",
+
+contact_title: "لنتواصل",
  
 contact_title: "لنتواصل",
  

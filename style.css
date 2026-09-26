@@ -11,6 +11,8 @@
     --amber:      #E0A238;   /* safety-amber accent */
     --rust:       #A6512D;   /* rebar-rust secondary accent */
     --ink-line-on-dark: rgba(236,232,223,0.16);
+    --graphite:      #2A2622;   /* warm charcoal - no blue tint, used for hero */
+    --graphite-soft: #3D372F;   /* lighter warm grey for secondary hero elements */
   
     --font-head: 'Space Grotesk', 'Segoe UI', sans-serif;
     --font-body: 'Inter', 'Segoe UI', sans-serif;
@@ -106,16 +108,15 @@
   .hero{
     position: relative;
     overflow: hidden;
-    background: var(--ink);
+    background: var(--graphite);
     color: var(--paper);
     padding: 96px 24px 110px;
   }
   .hero-grid{
     position:absolute; inset:0;
     background-image:
-      repeating-linear-gradient(0deg, var(--ink-line-on-dark) 0 1px, transparent 1px 64px),
-      repeating-linear-gradient(90deg, var(--ink-line-on-dark) 0 1px, transparent 1px 64px);
-    opacity: 0.7;
+      repeating-linear-gradient(135deg, var(--ink-line-on-dark) 0 1px, transparent 1px 80px);
+    opacity: 0.5;
   }
   .hero-inner{
     position: relative;
@@ -170,12 +171,12 @@
     width: 100%;
     aspect-ratio: 4/5;
     object-fit: cover;
-    background: var(--ink-soft);
+    background: var(--graphite-soft);
   }
   .hero-photo.img-missing{
     min-height: 260px;
     background:
-      repeating-linear-gradient(45deg, var(--ink-soft), var(--ink-soft) 10px, var(--ink) 10px, var(--ink) 20px);
+      repeating-linear-gradient(45deg, var(--graphite-soft), var(--graphite-soft) 10px, var(--graphite) 10px, var(--graphite) 20px);
   }
   
   /* ============================================================
